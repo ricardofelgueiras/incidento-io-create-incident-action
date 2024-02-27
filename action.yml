@@ -4,11 +4,11 @@ branding:
   icon: 'alert-circle'
   color: 'green'
 inputs:
-  api-key:  # Incident.io API Key
+  incidento-io-api-key:  # Incident.io API Key
     description: 'Incidento.io API Key'
     required: true
   incidento-io-api-url:  # Incident.io API URL
-    description: 'Incidento.io API URL'
+    description: 'Incidento.io base API URL'
     required: true
   github-token:  # GitHub Token
     description: 'GitHub API token'
