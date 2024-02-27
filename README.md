@@ -23,7 +23,7 @@ Note: the issue must have a label containing the priority (P1, P2, P3, P4 or P5)
 ```yaml
 uses: ricardofelgueiras/incidento-io-create-incident-action@v1.2
 with:
-  incidento-io-api-key: "${{ secrets.OPSGENIE_APIKEY }}"
-  incidento-io-api-url: "${{ secrets.OPSGENIE_URL }}"
+  incidento-io-api-key: "${{ secrets.INCIDENTO_IO_APIKEY }}"
+  incidento-io-api-url: "${{ secrets.INCIDENTO_IO_URL }}"
   github-token: "${{ secrets.GITHUB_TOKEN }}"
 ```
