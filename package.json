@@ -1,0 +1,12 @@
+{
+  "name": "incidento-io-create-incident-action",
+  "version": "1.0.0",
+  "description": "GitHub action to create incidents on the Incidento.io - the cheapest incident management tool.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ricardo Felgueiras",
+  "license": "ISC"
+}

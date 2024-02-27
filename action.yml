@@ -1,0 +1,18 @@
+name: 'Automatic Incidento.io incidents creation'
+description: 'Create an incident on the Incidento.io - the cheapest incident management tool.'
+branding:
+  icon: 'alert-circle'
+  color: 'green'
+inputs:
+  api-key:  # Incident.io API Key
+    description: 'Incidento.io API Key'
+    required: true
+  incidento-io-api-url:  # Incident.io API URL
+    description: 'Incidento.io API URL'
+    required: true
+  github-token:  # GitHub Token
+    description: 'GitHub API token'
+    required: true
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
