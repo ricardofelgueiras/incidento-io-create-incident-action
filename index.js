@@ -9,7 +9,9 @@ try {
     const github_token = core.getInput('github-token');
 
     // Get issue updated
-    const octokit = github.getOctokit(github_token);
+    const octokit = new Octokit({
+        auth: github_token,
+    });
     const issue = (async () => {
         return await octokit.rest.issues.get({
             repo: context.issue.repo,
@@ -17,7 +19,7 @@ try {
             owner: context.issue.owner
         })
     })();
-    
+
     issue.then(value => {
         // Create Incident.io incident
         incidentoIOOperations.createIncident(value.data, url, api_key);
