@@ -37633,7 +37633,7 @@ try {
     // Get issue updated
     const octokit = github.getOctokit(github_token);
     const issue = (async () => {
-        return await octokit.issues.get({
+        return await octokit.rest.issues.get({
             repo: context.issue.repo,
             issue_number: context.issue.number,
             owner: context.issue.owner
