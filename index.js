@@ -1,18 +1,19 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
+const { Octokit } = require("@octokit/action");
 const incidentoIOOperations = require('./incidento.io');
-const Octokit = require('octokit');
 
 try {
     const context = github.context;
+    
+    // Get action inputs
     const api_key = core.getInput('incidento-io-api-key');
     const url = core.getInput('incidento-io-api-url');
-    const github_token = core.getInput('github-token');
 
+    // Automatically authenticates with the GITHUB_TOKEN
+    const octokit = new Octokit();
+    
     // Get issue updated
-    const octokit = new Octokit({
-        auth: github_token,
-    });
     const issue = (async () => {
         return await octokit.rest.issues.get({
             repo: context.issue.repo,
