@@ -25,5 +25,5 @@ uses: ricardofelgueiras/incidento-io-create-incident-action@v1.2
 with:
   incidento-io-api-key: "${{ secrets.INCIDENTO_IO_APIKEY }}"
   incidento-io-api-url: "${{ secrets.INCIDENTO_IO_URL }}"
-  github-token: "${{ secrets.GITHUB_TOKEN }}"
+  github-token: ${{ secrets.GITHUB_TOKEN }}
 ```
