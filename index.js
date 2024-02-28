@@ -1,6 +1,7 @@
 const core = require('@actions/core');
 const github = require('@actions/github');
 const incidentoIOOperations = require('./incidento.io');
+const Octokit = require('octokit');
 
 try {
     const context = github.context;
