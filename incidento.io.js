@@ -22,8 +22,9 @@ function createIncident(issuePayload, url, apiKey) {
 function getJson(issue) {
     var create_incident_json = {
         "title": issue.title,
-        "description": issue.html_url,
-        "priority": getPriorityFromLabels(issue.labels)
+        "description": issue.body,
+        "priority": getPriorityFromLabels(issue.labels),
+        "externalLink": issue.html_url,
     };
     return create_incident_json;
 }
